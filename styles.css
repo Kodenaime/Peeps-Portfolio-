@@ -1,0 +1,181 @@
+ 
+ body{
+    margin: 0px;
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ }
+
+ .container{
+    display: grid;
+    grid-template-columns: 1fr;
+ }
+ 
+ .nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+ }
+
+ .left-side{
+    display: flex;
+ }
+
+ .nav-wrapper > .left-side > div{
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+ }
+
+ .link-wrapper{
+    height: 20px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+ }
+
+.link-wrapper a{
+    color: lightseagreen;
+    text-decoration: none;
+    transition: color 0.5s;
+ }
+ .link-wrapper:hover{
+    border-bottom: 2px solid orangered;
+ }
+
+ .link-wrapper a:hover{
+    color: 2px solid orangered;
+ }
+
+ 
+ .active-link{
+   border-bottom: 2px solid orangered;
+ }
+
+ .active-link a{
+   color: 2px solid orangered !important;
+   
+ }
+
+ .right-side{
+   color: aqua;
+ }
+
+/*portfolio styles*/
+ 
+.items-wrapper{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+ 
+ }
+
+ .item-wrapper{
+   position: relative;
+ }
+
+ .img-background{
+   height: 300px;
+   width: 100%;
+   object-fit: contain;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   
+ }
+
+ .text-wrapper{
+   position: absolute;
+   top: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   text-align: center;
+   padding-left: 15px;
+   padding-right: 15px;
+   width: fit-content;
+  
+ }
+
+
+
+.text-wrapper .subtitle{
+   transition: 1s;
+   color: transparent;
+   font-weight: 600;
+}
+
+.text-wrapper:hover .subtitle{
+   font-weight: 600;
+   color: orangered;
+   cursor: pointer;
+}
+
+.img-darken {
+   transition: 1s;
+   filter: brightness(10%);
+}
+
+
+
+
+/* About us */
+
+
+.colum-wrapper{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img{
+   width: 100%;
+   height: auto;
+}
+
+.profile-content-wrapper{
+   padding: 30px;
+}
+
+.profile-content-wrapper h1{
+   color: lightseagreen;
+}
+
+p{
+   color: #ff2800;
+}
+
+
+/** resolution**/
+
+@media (max-width: 480px){
+   .items-wrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+   .colum-wrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+   }
+}
+
+
+@media (min-width:481px) and (max-width:768px){
+   .items-wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .colum-wrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+   }
+
+}
+
+
+
+
+
